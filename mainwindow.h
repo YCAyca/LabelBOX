@@ -15,6 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_ImageDataset_clicked();
+    void on_LabelFile_clicked();
+    void on_Video_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

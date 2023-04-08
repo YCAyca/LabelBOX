@@ -19,15 +19,8 @@ int main(int argc, char *argv[])
         cout << "C++20 (and later)" << endl;
     #endif
 
-    Mat img1;
-    img1 = imread("/home/yca/Redbull/inference/reyon_foto2.jpg");
-    imshow("Car",img1);
-    waitKey(5000);
-    destroyWindow("Car");
-
-
     QApplication a(argc, argv);
- /*   MainWindow w;
+    MainWindow w;
     w.show();
-    return a.exec(); */
+    return a.exec();
 }

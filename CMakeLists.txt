@@ -38,7 +38,12 @@ else()
     main.cpp
     mainwindow.cpp
     mainwindow.h
+    image.cpp
+    image.h
+    annotation.cpp
+    annotation.h
     mainwindow.ui
+    resources.qrc
   )
 endif()
 
