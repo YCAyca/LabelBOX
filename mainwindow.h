@@ -16,11 +16,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ImageDataset_clicked();
-    void on_LabelFile_clicked();
-    void on_Video_clicked();
+    void ImageDatasetclicked();
+    void Videoclicked();
 
 private:
     Ui::MainWindow *ui;
+    void createActions();
 };
 #endif // MAINWINDOW_H

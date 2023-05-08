@@ -261,7 +261,7 @@
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>0</x>
      <y>0</y>
      <width>1130</width>
      <height>26</height>
@@ -301,7 +301,6 @@
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="ImageDataset"/>
-    <addaction name="LabelFile"/>
     <addaction name="Video"/>
     <addaction name="separator"/>
    </widget>
@@ -320,9 +319,9 @@
     <string>Image Dataset</string>
    </property>
   </action>
-  <action name="LabelFile">
+  <action name="ClassFile">
    <property name="text">
-    <string>Label File</string>
+    <string>Class File</string>
    </property>
   </action>
   <action name="Video">

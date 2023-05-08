@@ -40,8 +40,8 @@ else()
     mainwindow.h
     image.cpp
     image.h
-    annotation.cpp
-    annotation.h
+    annotationfile.cpp
+    annotationfile.h
     mainwindow.ui
     resources.qrc
   )

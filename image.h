@@ -2,18 +2,20 @@
 #define IMAGE_H
 
 #include <opencv2/opencv.hpp>
-#include <QString>
-#include "annotation.h"
+#include <string>
+#include "annotationfile.h"
 
 class Image
 {
 public:
-    Image(QString image_path);
+    Image(std::string image_path); // default constructor
+    Image(const Image& im); // copy constructor
+    Image& operator=(const Image& im); // assignment constructor
 private:
     cv::Mat image;
-    QString image_name;
+    std::string image_name;
     std::tuple<uint16_t, uint16_t> size;
-    Annotation annotations;
+    AnnotationFile annotation_file;
 };
 
 #endif // IMAGE_H
