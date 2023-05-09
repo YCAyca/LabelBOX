@@ -8,7 +8,6 @@
 #include <QMessageBox>
 #include <vector>
 
-
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent):

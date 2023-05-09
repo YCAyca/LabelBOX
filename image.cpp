@@ -6,16 +6,22 @@ Image::Image(std::string image_path)
 {
     this->image = cv::imread(image_path);
     char *ptr, *tmp;
-    ptr = strtok(image_path, "/");
+    char* path_ = &image_path[0];
 
+    ptr = strtok(path_, "/");
     while (ptr != NULL)
     {
        tmp = ptr;
        ptr = strtok (NULL, "/");
     }
-    this->image_name = ptr;
-    this->size = std::make_tuple(this->image.cols, this->image.height);
-    this->annotation_file = AnnotationFile(annotation_file_path, this->image.cols, this->image.height);
+    this->image_name = tmp;
+    this->size = std::make_tuple(this->image.cols, this->image.rows);
+
+    std::string annotation_file_path = image_path;
+    annotation_file_path.erase(annotation_file_path.begin()+(annotation_file_path.find(".")), annotation_file_path.end());
+    annotation_file_path += ".txt";
+    AnnotationFile annot(annotation_file_path, this->image.cols, this->image.rows);
+    this->annotation_file = annot;
 }
 
 Image::Image(const Image& im)
