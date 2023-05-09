@@ -28,7 +28,8 @@ struct YOLObox{
 class AnnotationFile
 {
 public:
-    AnnotationFile(std::string filename, uint16_t im_width, uint16_t im_height);
+    AnnotationFile(std::string, uint16_t, uint16_t);
+    AnnotationFile() = default;
 private:
     std::string filename;
     uint16_t image_width, image_height;
